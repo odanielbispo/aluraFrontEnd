@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Brasil</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>    
+</body>
+<script>
+    let tela = document.querySelector('canvas')
+    let pincel = tela.getContext('2d')
+
+    //200 140
+    pincel.fillStyle = 'green'
+    pincel.fillRect(0, 0, 600, 400)
+
+    pincel.fillStyle = 'yellow'
+    pincel.beginPath()
+    pincel.moveTo(100/*comprimento esquerdo*/, 200/*altura ponta esquerda*/)
+    pincel.lineTo(300/*ponta superior horizontal*/, 75/*altura ponta superior*/)
+    pincel.lineTo(500/*comprimento direito*/, 200/*altura ponta direita*/)
+    pincel.fill()
+    
+    pincel.fillStyle = 'yellow'
+    pincel.beginPath()
+    pincel.moveTo(100/*comprimento esquerdo*/, 200/*altura ponta esquerda*/)
+    pincel.lineTo(300/*ponta superior horizontal*/, 325/*altura ponta superior*/)
+    pincel.lineTo(500/*comprimento direito*/, 200/*altura ponta direita*/)
+    pincel.fill()
+
+    pincel.fillStyle = 'darkblue'
+    pincel.beginPath()
+    pincel.arc(300, 200, 80, 0, 2 * 3.14)
+    pincel.fill()
+</script>
+</html>

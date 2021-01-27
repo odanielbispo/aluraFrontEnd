@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Advinha mais</title>
+</head>
+<body>
+    <input/>
+    <button>Compare com meu segredo</button>
+</body>
+
+<script>
+
+    function sorteia(){
+        return Math.round(Math.random() * 10)
+    }
+
+    function sorteiaNumeros(quantidade){
+        let segredos = [];
+        let num = 1;
+        while(num <= quantidade){
+
+            let numeroAleatorio = sorteia();
+
+            if(numeroAleatorio != 0){
+                let achou = false;
+
+                for(let i = 0; i < segredos.length; i++){
+                    if(segredos[i] == numeroAleatorio){
+                        achou = true;
+                        break;
+                    }
+                }
+
+                if(achou == false){
+                    segredos.push(numeroAleatorio);
+                    num++;
+                } 
+            }            
+        }
+        return segredos;
+    }
+
+    let segredos = sorteiaNumeros(3);
+
+    let input = document.querySelector("input");
+    input.focus();
+
+    function verifica(){
+        let achou = false;
+
+        for(i = 0; i < segredos.length; i++){
+            if(input.value == segredos[i]){
+                alert('Voce acertou');
+                achou = true;
+                break;
+            }
+        }
+
+        if(achou == false){
+            alert('Você errou')
+        }
+        
+        input.value = '';
+        input.focus();
+    }
+    
+    let button = document.querySelector('button');
+    button.onclick = verifica;
+</script>
+</html>

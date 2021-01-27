@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Ano Copa</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function pulaLinha(){
+        document.write('<br>');
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var limite = parseInt(prompt('Insira um ano limite: '));
+    var anoCopa = 1930;
+
+    while(anoCopa <= limite){
+        mostra('Teve copa em ' + anoCopa);
+        anoCopa = anoCopa + 4;       
+    }
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>For</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function pulaLinha(){
+        document.write('<br>');
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    let numero = parseInt(prompt('Tabuada de qual número?'));
+
+    for(let i = 1; i <= 10; i++){
+        mostra(numero * i);
+    }
+    mostra('Fim');
+
+
+</script>
+</html>

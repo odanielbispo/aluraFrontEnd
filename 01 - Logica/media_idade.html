@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Media Idades</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function pulaLinha(){
+        document.write('<br>');
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    let totalFamiliares = parseInt(prompt('Quantas pessoas vão entrar na conta? '));
+    
+    let numero = 1;
+    let totalIdades = 0;
+
+    while(numero <= totalFamiliares){
+        let idade = parseInt(prompt('Informe idade do familiar: '));
+        totalIdades = totalIdades + idade;
+        numero++;
+    }
+
+    let media = totalIdades / totalFamiliares;
+    mostra(media);
+
+
+</script>
+</html>

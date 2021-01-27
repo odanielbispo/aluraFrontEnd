@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Programa 3</title>
+</head>
+<body>
+    <canvas width="600" height="400" ></canvas>
+</body>
+<script>
+
+    let tela = document.querySelector('canvas')
+    let pincel = tela.getContext('2d')
+
+    pincel.fillStyle = 'grey'
+    pincel.fillRect(0, 0, 600, 400)
+
+    function desenhaCirculo(evento){
+        console.log(evento)
+
+        let x = evento.pageX - tela.offsetLeft
+        let y = evento.pageY - tela.offsetTop
+        pincel.fillStyle = 'blue'
+        pincel.beginPath()
+        pincel.arc(x, y, 10, 0, 2 * 3.14)
+        pincel.fill()
+        console.log( x + ',' + y)
+    }
+
+    tela.onclick = desenhaCirculo
+</script>
+</html>
